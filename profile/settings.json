@@ -1,5 +1,4 @@
 {
-    "git.defaultCloneDirectory": "",
     "[java]": {
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
