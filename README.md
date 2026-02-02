@@ -1,2 +1,2 @@
 # lithepunk-vscode-profile
-A minimal, personal VS Code profile and settings for frictonless coding
+A minimal, personal VS Code profile and settings for frictionless coding
