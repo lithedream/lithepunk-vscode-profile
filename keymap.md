@@ -17,7 +17,7 @@ This keymap is intentionally shaped by Eclipse muscle memory for lost souls movi
 |---|---|---|---|
 | `Alt+1` | `workbench.action.showAllSymbols` | always | Workspace symbols (close to "Open Type") |
 | `Alt+2` | `java.action.showExtendedOutline` | `javaLSReady && editorLangId == 'java'` | Java structure view (Outline-like) |
-| `Alt+2` | `workbench.action.gotoSymbol` | `!javaLSReady || editorLangId != 'java'` | Fallback symbol nav for non-Java |
+| `Alt+2` | `workbench.action.gotoSymbol` | `!javaLSReady \|\| editorLangId != 'java'` | Fallback symbol nav for non-Java |
 | `Alt+3` | `workbench.action.quickOpen` | always | Quick file/resource open |
 | `Alt+4` | `workbench.view.explorer` | `viewContainer.workbench.view.explorer.enabled` | Project explorer focus |
 | `Alt+5` | `outline.focus` | always | Outline panel focus |
@@ -32,7 +32,7 @@ This keymap is intentionally shaped by Eclipse muscle memory for lost souls movi
 | `Ctrl+L` | `workbench.action.gotoLine` | always | Go to line |
 | `Ctrl+Shift+C` | `editor.action.commentLine` | `editorTextFocus && !editorReadonly` | Toggle line comment |
 | `Ctrl+D` | `editor.action.deleteLines` | `textInputFocus && !editorReadonly` | Delete line |
-| `Alt+Z` | `actions.find` | `editorFocus || editorIsOpen` | Find in editor |
+| `Alt+Z` | `actions.find` | `editorFocus \|\| editorIsOpen` | Find in editor |
 | `Escape Escape` | `workbench.action.toggleZenMode` | `!isAuxiliaryWindowFocusedContext && editorFocus` | Fast distraction-free toggle |
 
 ## Removed default bindings (intentional conflict cleanup)
