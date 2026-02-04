@@ -7,7 +7,7 @@ This keymap is shaped by Eclipse muscle memory: fast symbol lookup, hierarchy-fi
 The bindings are designed to be remembered as a small navigation deck rather than a list of shortcuts.
 
 - `Alt+1..3` = "jump deck core" (`1` workspace symbols, `2` code outline/symbols, `3` quick open)
-- `Alt+4/5` = secondary views (Explorer and Outline focus)
+- `Alt+4/5` = secondary views (`Alt+4` project tree focus, `Alt+5` outline focus)
 - `F3/F4` = "type drill-down" (definition and hierarchy)
 - `Alt+A/Q` = "relationship lenses" (references and call hierarchy)
 - `Alt+Left/Right` = "time travel" (back/forward nav history)
@@ -23,7 +23,8 @@ A few bindings adapt to context (notably Alt+2), providing Java-specific structu
 | `Alt+2` | `java.action.showExtendedOutline` | `javaLSReady && editorLangId == 'java'` | Java structure view (Outline-like) |
 | `Alt+2` | `workbench.action.gotoSymbol` | `!javaLSReady \|\| editorLangId != 'java'` | Fallback symbol nav for non-Java |
 | `Alt+3` | `workbench.action.quickOpen` | always | Quick file/resource open |
-| `Alt+4` | `workbench.view.explorer` | `viewContainer.workbench.view.explorer.enabled` | Project explorer focus |
+| `Alt+4` | `javaProjectExplorer.focus` | `editorLangId == 'java'` | Java project explorer focus in Java editing |
+| `Alt+4` | `workbench.view.explorer` | `viewContainer.workbench.view.explorer.enabled && editorLangId != 'java'` | Explorer focus outside Java editing |
 | `Alt+5` | `outline.focus` | always | Outline panel focus |
 | `Alt+E` | `workbench.action.showAllEditors` | always | Open editors list |
 | `F3` | `editor.action.revealDefinition` | `editorHasDefinitionProvider && editorTextFocus` | Go to definition (classic Eclipse habit) |
@@ -49,7 +50,7 @@ Several default bindings are intentionally removed to keep this map consistent a
 | `Alt+1` | `workbench.action.openEditorAtIndex1` | always | Free `Alt+1` for symbols |
 | `Alt+2` | `workbench.action.openEditorAtIndex2` | always | Free `Alt+2` for outline/symbols |
 | `Alt+3` | `workbench.action.openEditorAtIndex3` | always | Free `Alt+3` for quick open |
-| `Alt+4` | `workbench.action.openEditorAtIndex4` | always | Free `Alt+4` for explorer |
+| `Alt+4` | `workbench.action.openEditorAtIndex4` | always | Free `Alt+4` for project tree focus |
 | `Alt+5` | `workbench.action.openEditorAtIndex5` | always | Free `Alt+5` for outline |
 | `F3` | `editor.action.nextMatchFindAction` | `editorFocus` | Keep `F3` dedicated to definition |
 | `F3` | `list.find` | `listFocus && listSupportsFind` | Avoid collisions with definition flow |

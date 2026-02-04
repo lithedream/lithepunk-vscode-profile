@@ -176,7 +176,7 @@
     {
         "key": "alt+4",
         "command": "workbench.view.explorer",
-        "when": "viewContainer.workbench.view.explorer.enabled"
+        "when": "viewContainer.workbench.view.explorer.enabled && editorLangId != 'java'"
     },
     {
         "key": "alt+5",
@@ -185,5 +185,10 @@
     {
         "key": "alt+e",
         "command": "workbench.action.showAllEditors"
+    },
+    {
+        "key": "alt+4",
+        "command": "javaProjectExplorer.focus",
+        "when": "editorLangId == 'java'"
     }
 ]
