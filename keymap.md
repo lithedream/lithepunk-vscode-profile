@@ -1,8 +1,10 @@
 # Keymap - lithepunk Profile
 
-This keymap is intentionally shaped by Eclipse muscle memory for lost souls moving to VS Code: fast symbol lookup, hierarchy-first navigation, and minimal mouse use.
+This keymap is shaped by Eclipse muscle memory: fast symbol lookup, hierarchy-first navigation, and minimal mouse use.
 
 ## The mental model (memorable layout)
+
+The bindings are designed to be remembered as a small navigation deck rather than a list of shortcuts.
 
 - `Alt+1..3` = "jump deck core" (`1` workspace symbols, `2` code outline/symbols, `3` quick open)
 - `Alt+4/5` = secondary views (Explorer and Outline focus)
@@ -13,8 +15,10 @@ This keymap is intentionally shaped by Eclipse muscle memory for lost souls movi
 
 ## Active bindings
 
+A few bindings adapt to context (notably Alt+2), providing Java-specific structure when available and generic symbol navigation otherwise.
+
 | Key | Command | When | Intent / Eclipse influence |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `Alt+1` | `workbench.action.showAllSymbols` | always | Workspace symbols (close to "Open Type") |
 | `Alt+2` | `java.action.showExtendedOutline` | `javaLSReady && editorLangId == 'java'` | Java structure view (Outline-like) |
 | `Alt+2` | `workbench.action.gotoSymbol` | `!javaLSReady \|\| editorLangId != 'java'` | Fallback symbol nav for non-Java |
@@ -33,12 +37,14 @@ This keymap is intentionally shaped by Eclipse muscle memory for lost souls movi
 | `Ctrl+Shift+C` | `editor.action.commentLine` | `editorTextFocus && !editorReadonly` | Toggle line comment |
 | `Ctrl+D` | `editor.action.deleteLines` | `textInputFocus && !editorReadonly` | Delete line |
 | `Alt+Z` | `actions.find` | `editorFocus \|\| editorIsOpen` | Find in editor |
-| `Escape Escape` | `workbench.action.toggleZenMode` | `!isAuxiliaryWindowFocusedContext && editorFocus` | Fast distraction-free toggle |
+| `Escape Escape` | `workbench.action.toggleZenMode` | `editorFocus && !codeActionMenuVisible && !isAuxiliaryWindowFocusedContext && !renameInputVisible` | Fast distraction-free toggle |
 
 ## Removed default bindings (intentional conflict cleanup)
 
+Several default bindings are intentionally removed to keep this map consistent and avoid collisions.
+
 | Key | Removed command | When | Why removed |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `Ctrl+1` | `workbench.action.focusFirstEditorGroup` | always | Free `Ctrl+1` for quick fix |
 | `Alt+1` | `workbench.action.openEditorAtIndex1` | always | Free `Alt+1` for symbols |
 | `Alt+2` | `workbench.action.openEditorAtIndex2` | always | Free `Alt+2` for outline/symbols |
@@ -60,9 +66,8 @@ This keymap is intentionally shaped by Eclipse muscle memory for lost souls movi
 | `Alt+A` | `editor.action.accessibilityHelpConfigureAssignedKeybindings` | accessibility help contexts | Free for references |
 | `Alt+Right` | `quickInput.acceptInBackground` | quick pick contexts | Preserve forward navigation |
 | `Ctrl+D` | `editor.action.addSelectionToNextFindMatch` | `editorFocus` | Free for delete line |
-| `Ctrl+M` | `editor.action.toggleTabFocusMode` | always | Prevent accidental toggle |
 
 ## Notes
 
-- Several bindings call Java extension commands; without Java tooling installed, only generic fallback bindings apply.
+- Without the Java extensions installed, only the generic fallback bindings will apply.
 - This is an intentionally opinionated map optimized for Java codebase navigation and refactoring speed.

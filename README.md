@@ -1,13 +1,13 @@
 # lithepunk-vscode-profile
 
-A minimal VS Code setup tuned for fast navigation and low-friction editing, attuned to Java but mostly language-agnostic.
-Built for me, and for the lost souls of Eclipse developers who want to feel at home in VS Code.
+A minimal VS Code setup tuned for fast navigation and low-friction editing.
+Designed for Java work, but mostly language-agnostic.
 
 ## What this repo contains
 
 - `profile/settings.json` — global editor/workbench defaults (theme, minimap off, sidebar right, terminal focus behavior).
 - `profile/keybindings.json` — custom navigation + symbol lookup workflow (`Alt+1..3` jump deck, `F3`, `F4`, etc.).
-- `profile/java.code-workspace` — **workspace template** for Java projects (JDK runtimes, source paths, Maven/Java explorer preferences).
+- `profile/java.code-workspace` — workspace configuration for Java projects (JDK runtimes, source paths, Maven/Java explorer preferences).
 
 ## Philosophy
 
@@ -25,9 +25,11 @@ Built for me, and for the lost souls of Eclipse developers who want to feel at h
 
 ## Expected extensions
 
-For full keybinding behavior, install Java support extensions (at least language support + project tooling), since several keybindings call Java commands.
+For full keybinding behavior, install the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack), since several keybindings invoke Java-specific commands.
 
 ## Keybinding map (high level)
+
+The core of this setup is a small “jump deck” of navigation shortcuts that replaces most mouse-driven exploration.
 
 - Jump deck core:
   - `Alt+1`: workspace symbols (project-wide symbol search)

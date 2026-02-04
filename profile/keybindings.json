@@ -131,13 +131,9 @@
         "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+m",
-        "command": "-editor.action.toggleTabFocusMode"
-    },
-    {
         "key": "escape escape",
         "command": "workbench.action.toggleZenMode",
-        "when": "!isAuxiliaryWindowFocusedContext && editorFocus"
+        "when": "editorFocus && !codeActionMenuVisible && !isAuxiliaryWindowFocusedContext && !renameInputVisible"
     },
     {
         "key": "f3",
