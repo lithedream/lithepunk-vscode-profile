@@ -27,6 +27,7 @@ A few bindings adapt to context (notably Alt+2), providing Java-specific structu
 | `Alt+4` | `workbench.view.explorer` | `viewContainer.workbench.view.explorer.enabled && editorLangId != 'java'` | Explorer focus outside Java editing |
 | `Alt+5` | `outline.focus` | always | Outline panel focus |
 | `Alt+E` | `workbench.action.showAllEditors` | always | Open editors list |
+| `Alt+S` | `workbench.action.quickTextSearch` | always | Quick Search |
 | `F3` | `editor.action.revealDefinition` | `editorHasDefinitionProvider && editorTextFocus` | Go to definition (classic Eclipse habit) |
 | `F4` | `java.action.showTypeHierarchy` | always | Java type hierarchy |
 | `Alt+A` | `references-view.findReferences` | `editorHasReferenceProvider` | Find references |
@@ -38,7 +39,7 @@ A few bindings adapt to context (notably Alt+2), providing Java-specific structu
 | `Ctrl+Shift+C` | `editor.action.commentLine` | `editorTextFocus && !editorReadonly` | Toggle line comment |
 | `Ctrl+D` | `editor.action.deleteLines` | `textInputFocus && !editorReadonly` | Delete line |
 | `Alt+Z` | `actions.find` | `editorFocus \|\| editorIsOpen` | Find in editor |
-| `Escape Escape` | `workbench.action.toggleZenMode` | `editorFocus && !codeActionMenuVisible && !isAuxiliaryWindowFocusedContext && !renameInputVisible` | Fast distraction-free toggle |
+| `Escape Escape` | `workbench.action.toggleZenMode` | `editorFocus && !codeActionMenuVisible && !isAuxiliaryWindowFocusedContext && !renameInputVisible && !findInputFocussed` | Fast distraction-free toggle |
 
 ## Removed default bindings (intentional conflict cleanup)
 

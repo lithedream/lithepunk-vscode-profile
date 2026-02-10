@@ -133,7 +133,7 @@
     {
         "key": "escape escape",
         "command": "workbench.action.toggleZenMode",
-        "when": "editorFocus && !codeActionMenuVisible && !isAuxiliaryWindowFocusedContext && !renameInputVisible"
+        "when": "editorFocus && !codeActionMenuVisible && !isAuxiliaryWindowFocusedContext && !renameInputVisible && !findInputFocussed"
     },
     {
         "key": "f3",
@@ -190,5 +190,9 @@
         "key": "alt+4",
         "command": "javaProjectExplorer.focus",
         "when": "editorLangId == 'java'"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.quickTextSearch"
     }
 ]
