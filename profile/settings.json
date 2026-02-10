@@ -1,12 +1,26 @@
 {
+    // Java specific settings
     "[java]": {
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
+    "java.compile.nullAnalysis.mode": "automatic",
+	"java.configuration.runtimes": [
+        
+        { "name": "JavaSE-1.8",  "path": "..." },
+        { "name": "JavaSE-11", "path": "..." },
+        { "name": "JavaSE-17", "path": "..." },
+        { "name": "JavaSE-21", "path": "..." },
+        { "name": "JavaSE-25", "path": "...", "default": true }
+	],
+    "java.configuration.updateBuildConfiguration": "automatic",
+	"java.project.explorer.showNonJavaResources": true,
+
+    // General settings
     "editor.fontSize": 13,
-    "zenMode.centerLayout": false,
-    "zenMode.hideLineNumbers": false,
-    "terminal.integrated.focusAfterRun": "terminal",
     "editor.minimap.enabled": false,
+    "terminal.integrated.focusAfterRun": "terminal",
     "workbench.colorTheme": "Default Light Modern",
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false
 }
