@@ -19,7 +19,6 @@
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "terminal.integrated.focusAfterRun": "terminal",
-    "workbench.colorTheme": "Default Light Modern",
     "workbench.sideBar.location": "right",
     "zenMode.centerLayout": false,
     "zenMode.hideLineNumbers": false
