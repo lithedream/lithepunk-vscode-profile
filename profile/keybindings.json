@@ -133,7 +133,7 @@
     {
         "key": "escape escape",
         "command": "workbench.action.toggleZenMode",
-        "when": "!codeActionMenuVisible && !findInputFocussed && !inQuickInput && !isAuxiliaryWindowFocusedContext && !renameInputVisible && !dirtyDiffVisible"
+        "when": "editorTextFocus && !codeActionMenuVisible && !dirtyDiffVisible && !findInputFocussed && !findWidgetVisible && !inQuickInput && !inZenMode && !isAuxiliaryWindowFocusedContext && !parameterHintsVisible && !renameInputVisible && !suggestWidgetVisible"
     },
     {
         "key": "f3",
